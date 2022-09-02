@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <link rel="stylesheet" href="css/estiloCalculadoraPADRAO.css">
+
+    <link rel="stylesheet" href="java/calculadora.js">
+
+</head>
+<body>
+    <div class="fundo">
+        <div class="titulo" style="padding-left: 5px;">
+            <h1>MARCOS LOPES</h1>
+            <!-- <h1>Desenvolvedor Web</h1> -->
+        </div>
+        
+        <div class="foto-perfil">
+            
+            <i href="https://imgbox.com/kCQJ1KOW" target="_blank">
+                <img class="foto-perfil" src="https://thumbs2.imgbox.com/5a/f5/kCQJ1KOW_t.jpg" 
+                alt="foto de perfil" /></i>
+                
+        </div>   
+
+        <div class="calculadora">
+            <h2>CALCULADORA</h2>
+            <p id="resultado"></p>
+            <table> <!-- tabela -->
+                <tr> <!-- linha --> 
+                    <td><button class="botao corSecundaria" onclick="clean()">C</button></td> <!-- <td> linha para incluir Dados -->
+                    <td><button class="botao corSecundaria" onclick="back()">«</button></td> <!-- <td> linha para incluir Dados -->
+                    <td><button class="botao corSecundaria" onclick="insert('/')">÷</button></td> <!-- <td> linha para incluir Dados -->
+                    <td><button class="botao corSecundaria" onclick="insert('*')">×</button></td> <!-- <td> linha para incluir Dados -->
+                </tr>
+                <tr> <!-- linha --> 
+                    <td><button class="botao" onclick="insert('7')">7</button></td> <!-- <td> linha para incluir Dados -->
+                    <td><button class="botao" onclick="insert('8')">8</button></td> <!-- <td> linha para incluir Dados -->
+                    <td><button class="botao" onclick="insert('9')">9</button></td> <!-- <td> linha para incluir Dados -->
+                    <td><button class="botao corSecundaria" onclick="insert('-')">-</button></td> <!-- <td> linha para incluir Dados -->
+                </tr>
+                <tr> <!-- linha --> 
+                    <td><button class="botao" onclick="insert('4')">4</button></td> <!-- <td> linha para incluir Dados -->
+                    <td><button class="botao" onclick="insert('5')">5</button></td> <!-- <td> linha para incluir Dados -->
+                    <td><button class="botao" onclick="insert('6')">6</button></td> <!-- <td> linha para incluir Dados -->
+                    <td><button class="botao corSecundaria" onclick="insert('+')">+</button></td> <!-- <td> linha para incluir Dados -->
+                </tr>
+                <tr> <!-- linha --> 
+                    <td><button class="botao" onclick="insert('1')">1</button></td> <!-- <td> linha para incluir Dados -->
+                    <td><button class="botao" onclick="insert('2')">2</button></td> <!-- <td> linha para incluir Dados -->
+                    <td><button class="botao" onclick="insert('3')">3</button></td> <!-- <td> linha para incluir Dados -->
+                    <td rowspan="2"><button class="botao corTerceira" style="height: 106px;" onclick="calcular()">=</button></td> <!-- "rowspan" espande o '=' para duas linhas -->
+                </tr>
+                <tr> <!-- linha --> 
+                    <td colspan="2"><button class="botao" onclick="insert('0')" 
+                        style="width: 106px;">0</button></td> <!-- "colspan" espande o '.' para duas colunas -->
+                    <td><button class="botao" onclick="insert('.')">,</button></td> <!-- <td> linha para incluir Dados -->
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="java/calculadora.js"></script>
+
+</body>
+</html>

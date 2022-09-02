@@ -1,0 +1,120 @@
+* { /* (asterisco) '*' - significa que TODO o corpo do HTML será afetado com os comando abaixo */
+    margin: 0; /* retira todas as margens (superior/inferior/laterais) do html */
+    padding: 0; /* retira todo preenchimento e espaçamento dentro do html 
+                (espaços entre NOME/TÍTULO/BOTÕES), incluindo
+                espaços e preenchimento dentro dos BOTÕES */
+}
+
+.fundo {
+    background-image: linear-gradient(45deg, rgb(83, 80, 80), rgb(209, 159, 93)); /* cor de fundo de toda a Tela:
+                        45deg = 45 graus de cor degradê que começa no canto inferior esquerdo como BLACK 
+                        e termina no conto superior direito como AMARELO */
+    height: 100vh; /* Tela de fundo vai ocupar 100% da Tela - "vh" tem essa função */
+    color: white; /* cor da fonte - não se aplica a cor dos Botões do Teclado Numérico */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* fontes da Tela, não incluem as fontes dentro dos Botões */
+                /* outras FONTES legais:
+                'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif 
+                'Segoe UI', Tahoma, Geneva, Verdana, sans-serif 
+                Verdana, Geneva, Tahoma, sans-serif               
+                */   
+}
+
+.titulo {
+    color: gainsboro; /* cor do Titulo */
+    text-align: center; /* alinhamento central do Titulo */
+    padding-top: 40px; /* espaçamento em relação a margem superior */
+    text-shadow: 0 0 10px black; /* efeito sombreado ao redor do nome */
+}
+
+.foto-perfil { 
+    opacity: calc(0.9); /* 0.9 = opacidade da cor da foto (fica meio transparente) - a escala vai de 0 à 1  */
+    position: fixed; /* posição fixa da Foto de Perfil */
+    height: auto; /* altura máxima da foto */
+    width: 30%; /* largura da foto */
+    border-radius: 50%; /* deixa a foto totalmente redonda */
+    margin-top: -20px; /* distância entre a Foto de Perfil e o topo da Tela */
+    margin-left: 95px; /* distância entre a Foto de Perfil e o lado esquerda da Tela */
+    box-shadow: 0 0 10px black; /* efeito sombreado ao redor da foto, causa a impressão da Foto de Perfil estar flutuando 
+                                    quatro números após 'bos-shadow' colocam uma moldura em volta da foto */
+}
+
+.calculadora {
+    position: relative; /* delimita o espaço referente a própria Calculadora, ou seja,
+                        a Calculadora não vai ocupar 100% da <div> que é uma linha
+                        inteira no Browser, da margem esquerda até a outra direita */
+    width: 225px; /* largura da Calculadora */
+    background-color: rgb(89, 158, 9, 0.8); /* cor de fundo da Calculadora - 0.8 = opacidade da cor, que vai de uma escala de 0 à 1 */
+    top: 50%; /* margem superior - alinha a Calculadora no meio, rente a margem esquerda */
+    left: 50%; /* margem esquerda - alinha a Calculadora no meio da Tela, mas em relação aos Vértices dos Eixos x/y */    
+    transform: translate(-50%, -50%); /* retira 50% dos Eixos x/y e deixa a Calculadora EXATAMENTE no Centro da Tela */
+    border-radius: 15px; /* efeito arredondado nas bordas da Calculcadora */
+    padding: 15px; /* distância entre o Título/Botões em relação aos laterais (superior/inferior/direita/esquerda) */
+    box-shadow: 0 0 10px black; /* efeito sombreado ao redor da Calculadora, causa a impressão dela estar flutuando */
+    text-align: center; /* alinhamento central das Fontes */
+    margin-top: -60px; /* espaçamento entre o Titulo e a Calculadora */
+}
+
+.botao {
+    background-color: rgb(83, 80, 80); /* cor de fundo dos Botões NUMÉRICOS - CINZA ESCURO */ 
+    /* background-color: rgb(31, 31, 31); */ /* cor de fundo dos Botões da Calculadora - PRETO */
+    width: 50px; /* largura dos Botões da Calculadora */
+    height: 50px; /* altura dos Botões da Calculadora */
+    font-size: 25px; /* tamanho da fonte dentro dos Botões da Calculadora */ 
+    border-radius: 20px; /* efeito arredondado nas bordas dos Botões da Calculadora */
+    color: white; /* cor dos NÚMEROS dos Botões da Calculadora */
+    cursor: pointer; /* estilo do cursor quando colocado em cima dos Botões - 
+                        estilo DEDO INDICADOR - "none" faz o cursor aparecer como SETA */
+    border: none; /* retira as bordas, que por Padrão são mais claras, e deixa os Botões uniformes (da mesma cor do fundo do elemento) */  
+    margin: 2px; /* define espaçamento igual entre todas as margens entre os Botões */    
+    outline: 0; /* bordas de fundo e QUADRADAS (superior/inferior/esquerda/direita) em volta de cada Botão - 0(zero) retira tais bordas */
+}
+
+.botao:hover { /* animação/flutuar dos Botões da Calculadora */
+    background-color: rgb(31, 31, 31); /* quando o mouse for posicionado em cima dos Botões eles mudarão de cor (de CINZA para GRAFITE) */
+}
+
+.corSecundaria {
+    background-color: rgb(114, 55, 55); /* cor de fundo dos Botões Símbolos Matemáticos */
+    color:darkorange; /* cor dos Símbolos Matemáticos */
+}
+
+.corSecundaria:hover { /* animação/flutuar dos Botões Símbolos Matemáticos */
+    background-color: rgb(163, 85, 85); /* quando o mouse for posicionado em cima dos Botões Símbolos Matemáticos eles mudarão de cor */
+    color: yellow; /* cor dos Símbolos Matemáticos quando o mouse for posicionado em cima deles */
+}
+
+.corTerceira {
+    background-color: rgb(6, 99, 6); /* cor de fundo do Botão SINAL de = */
+    color: rgb(141, 187, 72); /* cor do SINAL de = */
+}
+
+.corTerceira:hover { /* animação/flutuar do Botão SINAL de =  */
+    background-color: rgb(141, 187, 72); /* quando o mouse for posicionado em cima do Botão SINAL de = ele mudará de cor */
+    color: rgb(6, 99, 6); /* cor do Botão SINAL de = quando o mouse for posicionado em cima dele */
+}
+
+#resultado {
+    background-color: white; /* cor de fundo dentro do Display Resultado  */
+    width: 205px; /* largura do Display Resultado */ 
+    height: 30px; /* altura do Display Resultado  */
+    margin: 5px; /* espaçamento entre todos os Botões/Display/CALCULADORA dentro do espaço da Calculadora */
+    border-radius: 5px; /* bordas arredodadas do Display Resultado */
+    font-size: 25px; /* tamanho da Fonte que aparecerá dentro do Display Resultado  */
+    color: rgb(31, 31, 31); /* cor da Fonte dentro do Display Resultado */ 
+    text-align: right; /* números alinhados à direita do do Display Resultado  */
+    padding: 5px; /* espaçamento superior/inferior que ajuda a centralizar os NÚMEROS digitados dentro do Display Resultado */   
+    margin-top: 20px; /* espaçamento entre o Título CALCULADORA e o Display Resultado */
+    font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
+
+/* Os comandos abaixo funcionam quando a Tela for minimizada
+Textos e Títulos ficam responsivos */
+@media all and (max-width: 980px) { /* Tamanho máximo do Container de Textos */
+    .foto-perfil { 
+        opacity: calc(0.7); /* 0.7 = opacidade da cor da foto (fica meio transparente) - a escala vai de 0 à 1  */
+        position: fixed; /* posição fixa da Foto de Perfil */
+        margin-top: -30px; /* distância entre a Foto de Perfil e o topo da Tela */
+        margin-left: 10px; /* distância entre a Foto de Perfil e o lado esquerda da Tela */
+    }
+}
+
